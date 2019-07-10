@@ -17,6 +17,22 @@ slack_events_adaptor = SlackEventAdapter(SLACK_SIGNING_SECRET, "/listening", app
 slack_web_client = WebClient(token=SLACK_TOKEN)
 
 
+def job_korea():
+    # URL 데이터를 가져올 사이트 url 입력
+    url = "http://www.jobkorea.co.kr/top100/"
+
+    # URL 주소에 있는 HTML 코드를 soup에 저장합니다.
+    source_code = urllib.request.urlopen(url).read()
+    soup = BeautifulSoup(source_code, "html.parser")
+
+    list = []
+
+    for naver_text in soup.find_all("a", class_="coLink"):
+        list.append(naver_text.get_text())
+
+    print(list)
+
+
 # 크롤링 함수 구현하기
 def _crawl_portal_keywords(text):
     url_match = re.search(r'<(http.*?)(\|.*?)?>', text)
@@ -69,4 +85,5 @@ def index():
 
 
 if __name__ == '__main__':
+    job_korea()
     app.run('127.0.0.1', port=5000)
