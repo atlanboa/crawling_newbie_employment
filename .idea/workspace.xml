@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5d08a0fd-6701-4c85-aaab-132e3ce125a0" name="Default Changelist" comment="">
-<<<<<<< HEAD
-=======
       <change afterPath="$PROJECT_DIR$/make_block.py" afterDir="false" />
->>>>>>> beed056623473538ae4728fe0aa1d040344bf089
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chat_with_my_bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat_with_my_bot.py" afterDir="false" />
@@ -18,8 +15,6 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-<<<<<<< HEAD
-=======
   <component name="FUSProjectUsageTrigger">
     <session id="-2062955822">
       <usages-collector id="statistics.lifecycle.project">
@@ -73,7 +68,6 @@
       </usages-collector>
     </session>
   </component>
->>>>>>> beed056623473538ae4728fe0aa1d040344bf089
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
@@ -88,13 +82,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state relative-caret-position="150">
-              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
-=======
             <state relative-caret-position="283">
               <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
->>>>>>> beed056623473538ae4728fe0aa1d040344bf089
               <folding>
                 <element signature="e#25#48#0" expanded="true" />
               </folding>
@@ -177,7 +166,6 @@
     </findStrings>
   </component>
   <component name="Git.Settings">
-    <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
@@ -206,16 +194,30 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="chatbot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="chatbot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="venv" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="chatbot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scope" />
-      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-<<<<<<< HEAD
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="D:/Program Files/Git/bin/git.exe" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
-=======
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
@@ -224,7 +226,6 @@
       <recent name="C:\Users\student\PycharmProjects\repos\test" />
       <recent name="C:\Users\student\PycharmProjects\repos\test\venv" />
     </key>
->>>>>>> beed056623473538ae4728fe0aa1d040344bf089
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -303,16 +304,6 @@
       <option name="presentableId" value="Default" />
       <updated>1562741110477</updated>
     </task>
-<<<<<<< HEAD
-    <task id="LOCAL-00001" summary="job_info class">
-      <created>1562764730208</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1562764730208</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
-=======
     <task id="LOCAL-00001" summary="day 1">
       <created>1562747590880</created>
       <option name="number" value="00001" />
@@ -335,7 +326,6 @@
       <updated>1562809136012</updated>
     </task>
     <option name="localTasksCounter" value="4" />
->>>>>>> beed056623473538ae4728fe0aa1d040344bf089
     <servers />
   </component>
   <component name="TodoView">
@@ -355,27 +345,16 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-<<<<<<< HEAD
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49841937" weight="0.32899022" />
-=======
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49779737" weight="0.32896304" />
       <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.8751836" visible="true" weight="0.3083605" />
->>>>>>> beed056623473538ae4728fe0aa1d040344bf089
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49779737" weight="0.32790446" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-<<<<<<< HEAD
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49578503" visible="true" weight="0.5173536" />
-      <window_info anchor="bottom" id="Python Console" order="9" sideWeight="0.49841937" weight="0.3286334" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50421494" side_tool="true" visible="true" weight="0.5173536" />
-=======
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4886059" weight="0.22584148" />
       <window_info anchor="bottom" id="Python Console" order="9" sideWeight="0.49706313" weight="0.32790446" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5113941" side_tool="true" weight="0.22646007" />
->>>>>>> beed056623473538ae4728fe0aa1d040344bf089
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -400,9 +379,8 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout-to-restore>
   </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="job_info class" />
-    <option name="LAST_COMMIT_MESSAGE" value="job_info class" />
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="day 1" />
@@ -480,13 +458,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="150">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
-=======
         <state relative-caret-position="283">
           <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
->>>>>>> beed056623473538ae4728fe0aa1d040344bf089
           <folding>
             <element signature="e#25#48#0" expanded="true" />
           </folding>
