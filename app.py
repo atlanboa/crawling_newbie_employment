@@ -44,6 +44,19 @@ class JobInfo:
         print('링크 ({})'.format(self.co_link+self.link))
         print('-------------------------------------------------------------------------')
 
+    def get_string(self):
+        string = '-------------------------------------------------------------------------'+\
+                 '회사명 ({})\n'.format(self.company) + \
+                 '메인 타이틀 ({})\n'.format(self.title) + \
+                 '서브 타이틀 ({})\n'.format(self.sub_title) + \
+                 '경력 구분 ({})\n'.format(self.career) + \
+                 '학력 ({})\n'.format(self.education) + \
+                 '지역 ({})\n'.format(self.location) + \
+                 '고용 형태 ({})\n'.format(self.employment_type) + \
+                 '마감 ({})\n'.format(self.deadline) + \
+                 '링크 ({})\n'.format(self.co_link + self.link)
+        return string
+
     # setter
     def __setitem__(self, key, value):
         """Setting tag[key] sets the value of the 'key' attribute for the
@@ -140,7 +153,7 @@ def _crawl_newbie_info(task):
                           deadline,
                           link
             )
-            job.show_info()
+            # job.show_info()
             jobs.append(job)
     return jobs
 
@@ -252,6 +265,7 @@ def index():
 
 if __name__ == '__main__':
     # _crawl_job_info('text')
-    _crawl_newbie_info('전체')
-
+    jobs = _crawl_newbie_info('전체')
+    for job in jobs:
+        print(job.get_string())
     # app.run('127.0.0.1', port=5000)
