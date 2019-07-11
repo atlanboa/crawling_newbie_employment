@@ -4,7 +4,7 @@ from flask import Flask
 from slack import WebClient
 from slackeventsapi import SlackEventAdapter
 import chat_with_my_bot
-
+import make_block
 
 SLACK_TOKEN = 'xoxb-691797361766-689184678356-0H4RfMhRMctD17vM3qd4awhn'
 SLACK_SIGNING_SECRET = '56c25316dd82cc632339a6dc295701d3'
@@ -21,18 +21,23 @@ def app_mentioned(event_data):
     channel = event_data["event"]["channel"]
     text = event_data["event"]["text"]
 
-    chat_with_my_bot._chat_with_mybot()
+    # chat_with_my_bot._chat_with_mybot()
 
     if text == '<@UL9K54M32>':
         keywords = '안녕나는 챗봇이얌~~!! 취업정보를 알려주는 봇이얌 ^_^'
     else:
         keywords = chat_with_my_bot._chat_with_mybot(text)
 
-    slack_web_client.chat_postMessage(
-        channel=channel,
-        text=keywords
-    )
-
+    if type(keywords) == str:
+        slack_web_client.chat_postMessage(
+            channel=channel,
+            text=keywords
+        )
+    else:
+        slack_web_client.chat_postMessage(
+            channel=channel,
+            blocks=make_block.make_block(keywords)
+        )
 
 
 # # 링크 만들기
@@ -53,6 +58,6 @@ if __name__ == '__main__':
     # jobs = _crawl_newbie_info('전체')
     # for job in jobs:
         # print(job.__getattribute__('company'))
-    # app.run('127.0.0.1', port=5000)
+    app.run('127.0.0.1', port=5000)
 
 
