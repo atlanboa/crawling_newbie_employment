@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5d08a0fd-6701-4c85-aaab-132e3ce125a0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -52,14 +51,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="31" />
-          <entry key="py" value="1841" />
-          <entry key="txt" value="5" />
+          <entry key="py" value="2383" />
+          <entry key="txt" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="5" />
-          <entry key="Python" value="1872" />
+          <entry key="PLAIN_TEXT" value="16" />
+          <entry key="Python" value="2414" />
         </counts>
       </usages-collector>
     </session>
@@ -78,14 +77,15 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2372">
-              <caret line="78" column="13" lean-forward="true" selection-start-line="78" selection-start-column="13" selection-end-line="78" selection-end-column="13" />
+            <state relative-caret-position="378">
+              <caret line="83" column="20" selection-start-line="83" selection-start-column="20" selection-end-line="83" selection-end-column="20" />
               <folding>
                 <element signature="e#24#33#0" expanded="true" />
-                <marker date="1562809050671" expanded="true" signature="645:1004" ph="..." />
-                <marker date="1562809050671" expanded="true" signature="2416:3587" ph="..." />
-                <marker date="1562809050671" expanded="true" signature="2416:3604" ph="..." />
-                <marker date="1562809050671" expanded="true" signature="3630:4868" ph="..." />
+                <marker date="1562813783616" expanded="true" signature="645:1004" ph="..." />
+                <marker date="1562813783616" expanded="true" signature="5501:5815" ph="..." />
+                <marker date="1562813783616" expanded="true" signature="6256:7526" ph="..." />
+                <marker date="1562813783616" expanded="true" signature="6256:7543" ph="..." />
+                <marker date="1562813783616" expanded="true" signature="7569:8807" ph="..." />
               </folding>
             </state>
           </provider>
@@ -119,8 +119,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="99" />
-    <option name="y" value="23" />
+    <option name="x" value="482" />
+    <option name="y" value="49" />
     <option name="width" value="1400" />
     <option name="height" value="974" />
   </component>
@@ -222,7 +222,14 @@
       <option name="project" value="LOCAL" />
       <updated>1562748425541</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="day 2 crawls">
+      <created>1562809136012</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1562809136012</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TodoView">
@@ -235,22 +242,23 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="99" y="23" width="1400" height="974" extended-state="0" />
+    <frame x="482" y="49" width="1400" height="974" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2496329" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.0" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49779737" weight="0.32896304" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4941263" visible="true" weight="0.4386174" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.8759178" visible="true" weight="0.16686532" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49779737" weight="0.32896304" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49118942" weight="0.38617402" />
-      <window_info anchor="bottom" id="Python Console" order="9" sideWeight="0.49779737" weight="0.32896304" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50587374" side_tool="true" visible="true" weight="0.4386174" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.489721" weight="0.38617402" />
+      <window_info anchor="bottom" id="Python Console" order="9" sideWeight="0.49706313" weight="0.32896304" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.12408223" side_tool="true" visible="true" weight="0.16686532" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -261,7 +269,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="day 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="day 1" />
+    <MESSAGE value="day 2 crawls" />
+    <option name="LAST_COMMIT_MESSAGE" value="day 2 crawls" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/requirements.txt">
@@ -280,14 +289,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2372">
-          <caret line="78" column="13" lean-forward="true" selection-start-line="78" selection-start-column="13" selection-end-line="78" selection-end-column="13" />
+        <state relative-caret-position="378">
+          <caret line="83" column="20" selection-start-line="83" selection-start-column="20" selection-end-line="83" selection-end-column="20" />
           <folding>
             <element signature="e#24#33#0" expanded="true" />
-            <marker date="1562809050671" expanded="true" signature="645:1004" ph="..." />
-            <marker date="1562809050671" expanded="true" signature="2416:3587" ph="..." />
-            <marker date="1562809050671" expanded="true" signature="2416:3604" ph="..." />
-            <marker date="1562809050671" expanded="true" signature="3630:4868" ph="..." />
+            <marker date="1562813783616" expanded="true" signature="645:1004" ph="..." />
+            <marker date="1562813783616" expanded="true" signature="5501:5815" ph="..." />
+            <marker date="1562813783616" expanded="true" signature="6256:7526" ph="..." />
+            <marker date="1562813783616" expanded="true" signature="6256:7543" ph="..." />
+            <marker date="1562813783616" expanded="true" signature="7569:8807" ph="..." />
           </folding>
         </state>
       </provider>

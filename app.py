@@ -65,47 +65,84 @@ def get_top10_url(task):
 
 # top 10 페이지 크롤링
 def get_newbie_url(task):
-    urls = {}
+    urls = {'경영':'http://www.jobkorea.co.kr/starter/?schLocal=&schPart=10012&schMajor=&schEduLevel=&schWork=&schCType=&isSaved=1&LinkGubun=0&LinkNo=0&Page=1&schType=0&schGid=0&schOrderBy=0&schTxt=',
+            '마케팅': 'http://www.jobkorea.co.kr/starter/?schLocal=&schPart=10013&schMajor=&schEduLevel=&schWork=&schCType=&isSaved=1&LinkGubun=0&LinkNo=0&Page=1&schType=0&schGid=0&schOrderBy=0&schTxt=',
+            'IT': 'http://www.jobkorea.co.kr/starter/?schLocal=&schPart=10016&schMajor=&schEduLevel=&schWork=&schCType=&isSaved=1&LinkGubun=0&LinkNo=0&Page=1&schType=0&schGid=0&schOrderBy=0&schTxt=',
+            '디자인': 'http://www.jobkorea.co.kr/starter/?schLocal=&schPart=10019&schMajor=&schEduLevel=&schWork=&schCType=&isSaved=1&LinkGubun=0&LinkNo=0&Page=1&schType=0&schGid=0&schOrderBy=0&schTxt=',
+            '무역': 'http://www.jobkorea.co.kr/starter/?schLocal=&schPart=10014&schMajor=&schEduLevel=&schWork=&schCType=&isSaved=1&LinkGubun=0&LinkNo=0&Page=1&schType=0&schGid=0&schOrderBy=0&schTxt=',
+            '디자인': 'http://www.jobkorea.co.kr/starter/?schLocal=&schPart=10015&schMajor=&schEduLevel=&schWork=&schCType=&isSaved=1&LinkGubun=0&LinkNo=0&Page=1&schType=0&schGid=0&schOrderBy=0&schTxt=',
+            '무역': 'http://www.jobkorea.co.kr/starter/?schLocal=&schPart=10022&schMajor=&schEduLevel=&schWork=&schCType=&isSaved=1&LinkGubun=0&LinkNo=0&Page=1&schType=0&schGid=0&schOrderBy=0&schTxt=',
+            '영업': 'http://www.jobkorea.co.kr/starter/?schLocal=&schPart=10015&schMajor=&schEduLevel=&schWork=&schCType=&isSaved=1&LinkGubun=0&LinkNo=0&Page=1&schType=0&schGid=0&schOrderBy=0&schTxt=',
+            '서비스': 'http://www.jobkorea.co.kr/starter/?schLocal=&schPart=10022&schMajor=&schEduLevel=&schWork=&schCType=&isSaved=1&LinkGubun=0&LinkNo=0&Page=1&schType=0&schGid=0&schOrderBy=0&schTxt=',
+            '연구개발': 'http://www.jobkorea.co.kr/starter/?schLocal=&schPart=10018&schMajor=&schEduLevel=&schWork=&schCType=&isSaved=1&LinkGubun=0&LinkNo=0&Page=1&schType=0&schGid=0&schOrderBy=0&schTxt=',
+            '생산': 'http://www.jobkorea.co.kr/starter/?schLocal=&schPart=10017&schMajor=&schEduLevel=&schWork=&schCType=&isSaved=1&LinkGubun=0&LinkNo=0&Page=1&schType=0&schGid=0&schOrderBy=0&schTxt=',
+            '교육': 'http://www.jobkorea.co.kr/starter/?schLocal=&schPart=10023&schMajor=&schEduLevel=&schWork=&schCType=&isSaved=1&LinkGubun=0&LinkNo=0&Page=1&schType=0&schGid=0&schOrderBy=0&schTxt=',
+            '건설': 'http://www.jobkorea.co.kr/starter/?schLocal=&schPart=10021&schMajor=&schEduLevel=&schWork=&schCType=&isSaved=1&LinkGubun=0&LinkNo=0&Page=1&schType=0&schGid=0&schOrderBy=0&schTxt=',
+            '의료': 'http://www.jobkorea.co.kr/starter/?schLocal=&schPart=10024&schMajor=&schEduLevel=&schWork=&schCType=&isSaved=1&LinkGubun=0&LinkNo=0&Page=1&schType=0&schGid=0&schOrderBy=0&schTxt=',
+            '미디어': 'http://www.jobkorea.co.kr/starter/?schLocal=&schPart=10020&schMajor=&schEduLevel=&schWork=&schCType=&isSaved=1&LinkGubun=0&LinkNo=0&Page=1&schType=0&schGid=0&schOrderBy=0&schTxt=',
+            '전문특수직': 'http://www.jobkorea.co.kr/starter/?schLocal=&schPart=10025&schMajor=&schEduLevel=&schWork=&schCType=&isSaved=1&LinkGubun=0&LinkNo=0&Page=1&schType=0&schGid=0&schOrderBy=0&schTxt=',
+            '전체': 'http://www.jobkorea.co.kr/starter/'
+            }
+
     return urls[task]
 
 
-def _crawl_newbie_info(task):
-    # url = get_newbie_url(task)
-    url = 'http://www.jobkorea.co.kr/Starter/?JoinPossible_Stat=0&schPart=%2C%2C10013%2C%2C&schOrderBy=0&LinkGubun=0&LinkNo=0&schType=0&schGid=0&Page=1'
-
+def collect_url(url):
+    # url = 'http://www.jobkorea.co.kr/starter'
     source_code = urllib.request.urlopen(url).read()
     soup = BeautifulSoup(source_code, "html.parser")
+    page_button = soup.find('div', class_='tplPagination')
+    urls = [url]
+    for href in page_button.find_all('a'):
+            urls.append('http://www.jobkorea.co.kr'+href.get('href'))
+    return urls
 
+
+def _crawl_newbie_info(task):
+
+    # url = 'http://www.jobkorea.co.kr/Starter/?JoinPossible_Stat=0&schPart=%2C%2C10013%2C%2C&schOrderBy=0&LinkGubun=0&LinkNo=0&schType=0&schGid=0&Page=1'
+    # print(urls)
+    # # get_newbie_url(task)로 업무에 따른 url 반환
+    # # collect_url(url)로 pagination된 전체 페이지 url 획득
+    # urls = collect_url(get_newbie_url(task))
+
+    urls = collect_url(get_newbie_url(task))
     jobs = []
-    filter_list = soup.find('ul', class_='filterList')
-    for li in filter_list.find_all('li'):
-        company = li.find('a', class_='coLink').getText()
-        title = li.find('a', class_='link').getText()
-        sub_title = li.find('div', class_='sTit').getText()
-        sdsc = li.find('div', class_='sDesc')
-        employment_type = sdsc.find('strong').getText()
-        career = ''
-        try:
-            education = sdsc.find_all('span')[0].getText()
-            location = sdsc.find_all('span')[1].getText()
 
-        except IndexError:
-            pass
-        deadline = li.find('span', class_='day').getText()
-        link = li.find('a', class_='coLink').get('href')
-        job = JobInfo(company,
-                      title,
-                      sub_title,
-                      career,
-                      education,
-                      location,
-                      employment_type,
-                      deadline,
-                      link
-        )
-        job.show_info()
-        jobs.append(job)
-        return jobs
+    for url in urls:
+        source_code = urllib.request.urlopen(url).read()
+        soup = BeautifulSoup(source_code, "html.parser")
+
+        filter_list = soup.find('ul', class_='filterList')
+
+        for li in filter_list.find_all('li'):
+            company = li.find('a', class_='coLink').getText()
+            title = li.find('a', class_='link').getText()
+            sub_title = li.find('div', class_='sTit').getText()
+            sdsc = li.find('div', class_='sDesc')
+            employment_type = sdsc.find('strong').getText()
+            career = ''
+            try:
+                education = sdsc.find_all('span')[0].getText()
+                location = sdsc.find_all('span')[1].getText()
+
+            except IndexError:
+                pass
+            deadline = li.find('span', class_='day').getText()
+            link = li.find('a', class_='coLink').get('href')
+            job = JobInfo(company,
+                          title,
+                          sub_title,
+                          career,
+                          education,
+                          location,
+                          employment_type,
+                          deadline,
+                          link
+            )
+            job.show_info()
+            jobs.append(job)
+    return jobs
 
 
 # top 10 페이지 크롤링
@@ -215,5 +252,6 @@ def index():
 
 if __name__ == '__main__':
     # _crawl_job_info('text')
-    _crawl_newbie_info('task')
+    _crawl_newbie_info('전체')
+
     # app.run('127.0.0.1', port=5000)
