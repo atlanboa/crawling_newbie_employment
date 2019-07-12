@@ -130,6 +130,8 @@ def _crawl_newbie_info(task):
                 pass
             deadline = li.find('span', class_='day').getText()
             link = li.find('a', class_='coLink').get('href')
+            if not link.startswith('http'):
+                link = 'http://www.jobkorea.co.kr'+link
             job = JobInfo(company,
                           title,
                           sub_title,

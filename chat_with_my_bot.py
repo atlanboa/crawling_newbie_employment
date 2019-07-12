@@ -1,6 +1,7 @@
 from konlpy.tag import Kkma
 import crawl
 
+
 def _chat_with_mybot(text):
     # 키워드 매칭을 위한 딕셔너리
     words = {'jobs': ['아이티', '인터넷', '게임', '큐에이', '테스터', '검증', '디비에이', '데이터베이스', '네트워크', '서버', '보안', '웹기획', '피엠', '웹마케팅', '웹프로그래머', '응용프로그래머', '시스템프로그래머', '컨텐츠', '사이트운영', '에이치티엠엘', '퍼블리싱', '유아이', '웹디자인', '이알피', '시스템분석', '시스템설계', '컴퓨터강사', '동영상제작', '동영상편집', '빅데이터', '인공지능', '소프트웨어', '하드웨어', '컴퓨터'],
@@ -30,23 +31,27 @@ def _chat_with_mybot(text):
 
     for i in range(len(words['jobs'])):
         if words['jobs'][i] in keywords:
-            anw.append(words['jobs'][i] + '에 관련된 직종을 추천해줄께 기다려봐~~^^\n')
-            # if
+            #크롤링한 직업정보 반환받고
             _jobs = crawl._crawl_newbie_info(jabs[words['jobs'][i]])
-            max = 2
-            index = 0
-            temp_jobs = []
-            for _job in _jobs:
-                if index >= max:
-                    break
-                else:
-                    index += 1
-                    temp_jobs.append(_job)
-                    # anw.append(_job.get_string())
-                    # anw.append(_job)
-                    # anw.append(make_block(_job))
-                    check = False
-            return temp_jobs
+
+            return _jobs
+            # anw.append(words['jobs'][i] + '에 관련된 직종을 추천해줄께 기다려봐~~^^\n')
+            # # if
+            # _jobs = crawl._crawl_newbie_info(jabs[words['jobs'][i]])
+            # max = 2
+            # index = 0
+            # temp_jobs = []
+            # for _job in _jobs:
+            #     if index >= max:
+            #         break
+            #     else:
+            #         index += 1
+            #         temp_jobs.append(_job)
+            #         # anw.append(_job.get_string())
+            #         # anw.append(_job)
+            #         # anw.append(make_block(_job))
+            #         check = False
+            # return temp_jobs
 
     if check:
         anw.append('뭐라는 거야 ~~ -3- 그건 몰라~\n')
