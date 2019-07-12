@@ -35,23 +35,6 @@ def _chat_with_mybot(text):
             _jobs = crawl._crawl_newbie_info(jabs[words['jobs'][i]])
 
             return _jobs
-            # anw.append(words['jobs'][i] + '에 관련된 직종을 추천해줄께 기다려봐~~^^\n')
-            # # if
-            # _jobs = crawl._crawl_newbie_info(jabs[words['jobs'][i]])
-            # max = 2
-            # index = 0
-            # temp_jobs = []
-            # for _job in _jobs:
-            #     if index >= max:
-            #         break
-            #     else:
-            #         index += 1
-            #         temp_jobs.append(_job)
-            #         # anw.append(_job.get_string())
-            #         # anw.append(_job)
-            #         # anw.append(make_block(_job))
-            #         check = False
-            # return temp_jobs
 
     if check:
         anw.append('뭐라는 거야 ~~ -3- 그건 몰라~\n')
