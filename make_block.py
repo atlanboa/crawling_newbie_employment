@@ -18,9 +18,10 @@ def make_block(_jobs, current):
         link = _jobs[i].__getattribute__('link')
 
         block = SectionBlock(
-            text="*<" + link + " | " + company + ">*\n" + sub_title + '\n경력 : ' + career +
-                 " | 학력 : " + education + " | 지역 : " + location + " | 고용 형태 : " + employment_type +
-                 " | 마감일 : " + deadline
+            text="*<" + link + " | " + company + ">*\n\n" + title + "\n" + sub_title + '\n경력 : ' + career +
+                 "무관   |   학력 : " + education + "   |   지역 : " + location + "\n고용 형태 : " + employment_type +
+                 "   |   마감일 : " + deadline +
+                 "\n-------------------------------------------------------------------------------------------------\n"
         )
         blocks.append(block)
 

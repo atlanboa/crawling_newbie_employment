@@ -78,14 +78,12 @@ def on_button_click():
     current = int(click_event.value)
 
     # 다른 리스트로 블록을 재가공
-    message_blocks = make_block.make_block(job_objects, current)
 
-    # 메시지를 채널에 올립니다
+    message_blocks = make_block.make_block(job_objects, current)
     slack_web_client.chat_postMessage(
         channel=click_event.channel.id,
         blocks=extract_json(message_blocks)
     )
-
     # Slack에게 클릭 이벤트를 확인했다고 알려줍니다
     return "OK", 200
 
